@@ -1,20 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cwbt1yv42qvii"]
+[gd_scene load_steps=3 format=3 uid="uid://0h7v70rgsq4a"]
 
-[ext_resource type="Script" uid="uid://drh7wvim48wj" path="res://hub.gd" id="1_l10or"]
+[ext_resource type="Script" uid="uid://dnftjfacmdesx" path="res://hub.gd" id="1_l10or"]
+[ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="2_hjueh"]
 
-[node name="Hub" type="Node2D"]
+[node name="Hub" type="Node3D"]
 script = ExtResource("1_l10or")
 
-[node name="clone_button" type="Button" parent="."]
-offset_left = 46.0
-offset_top = 26.0
-offset_right = 54.0
-offset_bottom = 34.0
-text = "bud
-"
-
-[node name="count_label" type="Label" parent="."]
-offset_left = 31.0
-offset_top = -1.0
-offset_right = 71.0
-offset_bottom = 22.0
+[node name="hub" parent="." instance=ExtResource("2_hjueh")]
