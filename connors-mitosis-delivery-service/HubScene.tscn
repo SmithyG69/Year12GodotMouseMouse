@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://7676g5l3vx4f"]
+
+[ext_resource type="Script" uid="uid://dj4wlkph82up5" path="res://HubScript.gd" id="1_1b4nb"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_m4mjg"]
+
+[node name="HubScene" type="Node3D"]
+script = ExtResource("1_1b4nb")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.11489)
+mesh = SubResource("QuadMesh_m4mjg")
