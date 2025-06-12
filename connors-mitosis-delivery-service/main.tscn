@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1eo05rwiless"]
+[gd_scene load_steps=4 format=3 uid="uid://d1eo05rwiless"]
 
 [ext_resource type="Script" uid="uid://cqeoa1hsy83mb" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://0h7v70rgsq4a" path="res://hubAsset.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bopjo3nhvq3lw" path="res://click_zone.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_0xm2m")
 hub_asset = ExtResource("2_h2yge")
+click_zone_scene = ExtResource("3_h2yge")
 
 [node name="WorldRoot" type="Node3D" parent="."]
 

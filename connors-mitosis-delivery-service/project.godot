@@ -11,8 +11,10 @@ config_version=5
 [application]
 
 config/name="Connors Mitosis Delivery Service"
+run/main_scene="uid://d1eo05rwiless"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+run/size/resizable=true
 
 [autoload]
 
@@ -22,5 +24,4 @@ GameManager="*res://scripts/GameManager.gd"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/resizable=false
 window/stretch/mode="viewport"
