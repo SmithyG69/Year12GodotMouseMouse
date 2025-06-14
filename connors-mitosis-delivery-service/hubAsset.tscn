@@ -1,9 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://0h7v70rgsq4a"]
-
-[ext_resource type="Script" uid="uid://dnftjfacmdesx" path="res://hubAsset.gd" id="1_l10or"]
-[ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="2_hjueh"]
-
-[node name="Hub" type="Node3D"]
-script = ExtResource("1_l10or")
-
-[node name="hub" parent="." instance=ExtResource("2_hjueh")]

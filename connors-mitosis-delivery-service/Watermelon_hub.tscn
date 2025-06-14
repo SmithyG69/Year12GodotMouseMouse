@@ -1,0 +1,74 @@
+[gd_scene load_steps=11 format=3 uid="uid://0h7v70rgsq4a"]
+
+[ext_resource type="Script" uid="uid://y5pgf48jwbnd" path="res://hub wall script/leftwall.gd" id="1_qdc0c"]
+[ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="2_hjueh"]
+[ext_resource type="Script" uid="uid://bfnm7jc678rk2" path="res://hub wall script/rightwallwall.gd" id="2_j5fws"]
+[ext_resource type="Script" uid="uid://cm24ibenntifn" path="res://hub wall script/topwall.gd" id="3_01tv7"]
+[ext_resource type="Script" uid="uid://cvec0t67po8dc" path="res://hub wall script/bottomwall.gd" id="4_ippit"]
+[ext_resource type="PackedScene" uid="uid://bfcvkx8u4ajgf" path="res://watermelon.tscn" id="6_01tv7"]
+[ext_resource type="Script" uid="uid://hyfd2hko63av" path="res://roof.gd" id="7_stywk"]
+[ext_resource type="Script" uid="uid://cned4628e4uby" path="res://floor.gd" id="8_4ytr8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qdc0c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0k6ln"]
+
+[node name="Hub" type="Node3D"]
+
+[node name="left wall" type="Area3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+script = ExtResource("1_qdc0c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="left wall"]
+transform = Transform3D(0.5, 0, 0, 0, 3.265, 0, 0, 0, 3.265, -1.90604, 0, -0.0107686)
+shape = SubResource("BoxShape3D_qdc0c")
+
+[node name="right wall" type="Area3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+script = ExtResource("2_j5fws")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="right wall"]
+transform = Transform3D(0.5, 0, 0, 0, 3.265, 0, 0, 0, 3.265, 1.89527, 0, 0)
+shape = SubResource("BoxShape3D_qdc0c")
+
+[node name="top wall" type="Area3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+script = ExtResource("3_01tv7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="top wall"]
+transform = Transform3D(3.265, 0, 0, 0, 3.265, 0, 0, 0, 0.5, 0, 0, -1.91365)
+shape = SubResource("BoxShape3D_qdc0c")
+
+[node name="bottom wall" type="Area3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+script = ExtResource("4_ippit")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bottom wall"]
+transform = Transform3D(3.265, 0, 0, 0, 3.265, 0, 0, 0, 0.5, 0, 0, 1.90919)
+shape = SubResource("BoxShape3D_qdc0c")
+
+[node name="hub" parent="." instance=ExtResource("2_hjueh")]
+
+[node name="watermelon" parent="." instance=ExtResource("6_01tv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0586023, 0, -0.0952282)
+
+[node name="roof" type="Area3D" parent="."]
+script = ExtResource("7_stywk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="roof"]
+transform = Transform3D(3.25284, 0, 0, 0, 0.433459, 0, 0, 0, 3.30968, 0, 1.72794, 0)
+shape = SubResource("BoxShape3D_0k6ln")
+
+[node name="floor" type="Area3D" parent="."]
+script = ExtResource("8_4ytr8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(3.25284, 0, 0, 0, 0.433459, 0, 0, 0, 3.30968, 0, -0.927025, 0)
+shape = SubResource("BoxShape3D_0k6ln")
+
+[connection signal="body_entered" from="left wall" to="left wall" method="_on_body_entered"]
+[connection signal="body_entered" from="right wall" to="right wall" method="_on_body_entered"]
+[connection signal="body_entered" from="top wall" to="top wall" method="_on_body_entered"]
+[connection signal="body_entered" from="bottom wall" to="bottom wall" method="_on_body_entered"]
+[connection signal="body_entered" from="roof" to="roof" method="_on_body_entered"]
+[connection signal="body_entered" from="floor" to="floor" method="_on_body_entered"]
