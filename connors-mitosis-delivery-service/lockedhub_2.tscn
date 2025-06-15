@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://jfnqw4drhp7s"]
 
-[ext_resource type="Script" uid="uid://07s5h6g4qyun" path="res://lockedhub2.gd" id="1_8hs2h"]
+[ext_resource type="Script" uid="uid://07s5h6g4qyun" path="res://HubScenes/lockedhub2.gd" id="1_8hs2h"]
 [ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="2_fajk6"]
-[ext_resource type="PackedScene" uid="uid://vsyeeg7u34h1" path="res://lock.glb" id="3_tf276"]
+[ext_resource type="PackedScene" uid="uid://vsyeeg7u34h1" path="res://Assets/lock.glb" id="3_tf276"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5xxqs"]
 

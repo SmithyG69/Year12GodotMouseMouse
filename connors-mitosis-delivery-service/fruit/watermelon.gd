@@ -3,7 +3,7 @@ extends CharacterBody3D
 var direction = Vector3(1, 0, 0.9).normalized()
 var speed = 2.0
 @export var max_watermelons = 8
-var watermelon = preload("res://watermelon.tscn")
+var watermelon = preload("res://fruit/watermelon.tscn")
 
 func _ready() -> void:
 	add_to_group("bouncer")

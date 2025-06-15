@@ -8,6 +8,7 @@ func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Ve
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if Global.giblits >= cost and kiwihub and lockedhub2:
 			Global.giblits -= cost
+			
 
 			# Spawn replacement in current position
 			var new_obj = kiwihub.instantiate()
@@ -22,3 +23,4 @@ func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Ve
 			get_parent().add_child(newlockedhub)
 			
 			queue_free()
+			

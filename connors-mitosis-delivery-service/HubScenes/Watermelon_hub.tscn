@@ -5,9 +5,9 @@
 [ext_resource type="Script" uid="uid://bfnm7jc678rk2" path="res://hub wall script/rightwallwall.gd" id="2_j5fws"]
 [ext_resource type="Script" uid="uid://cm24ibenntifn" path="res://hub wall script/topwall.gd" id="3_01tv7"]
 [ext_resource type="Script" uid="uid://cvec0t67po8dc" path="res://hub wall script/bottomwall.gd" id="4_ippit"]
-[ext_resource type="PackedScene" uid="uid://bfcvkx8u4ajgf" path="res://watermelon.tscn" id="6_01tv7"]
+[ext_resource type="PackedScene" uid="uid://bfcvkx8u4ajgf" path="res://fruit/watermelon.tscn" id="6_01tv7"]
 [ext_resource type="Script" uid="uid://hyfd2hko63av" path="res://roof.gd" id="7_stywk"]
-[ext_resource type="Script" uid="uid://cned4628e4uby" path="res://floor.gd" id="8_4ytr8"]
+[ext_resource type="Script" uid="uid://cned4628e4uby" path="res://hub wall script/floor.gd" id="8_4ytr8"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qdc0c"]
 

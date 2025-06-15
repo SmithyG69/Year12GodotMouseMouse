@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://cqvad0twbcffh"]
 
-[ext_resource type="Script" uid="uid://dnbjypkyrv0qn" path="res://locked_hub.gd" id="1_q21jf"]
+[ext_resource type="Script" uid="uid://dnbjypkyrv0qn" path="res://HubScenes/locked_hub.gd" id="1_q21jf"]
 [ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="2_f7oo5"]
 [ext_resource type="PackedScene" uid="uid://jfnqw4drhp7s" path="res://lockedhub_2.tscn" id="3_arj4e"]
-[ext_resource type="PackedScene" uid="uid://vsyeeg7u34h1" path="res://lock.glb" id="3_dsocg"]
-[ext_resource type="PackedScene" uid="uid://cabndw1fa45wv" path="res://kiwihub.tscn" id="4_f7oo5"]
+[ext_resource type="PackedScene" uid="uid://vsyeeg7u34h1" path="res://Assets/lock.glb" id="3_dsocg"]
+[ext_resource type="PackedScene" uid="uid://cabndw1fa45wv" path="res://HubScenes/kiwihub.tscn" id="4_f7oo5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_q21jf"]
 

@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cabndw1fa45wv"]
-
-[ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="1_bf8fd"]
-
-[node name="kiwihub" type="Node3D"]
-
-[node name="hub" parent="." instance=ExtResource("1_bf8fd")]

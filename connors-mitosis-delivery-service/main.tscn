@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1eo05rwiless"]
+[gd_scene load_steps=10 format=3 uid="uid://d1eo05rwiless"]
 
 [ext_resource type="Script" uid="uid://cqeoa1hsy83mb" path="res://main.gd" id="1_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://0h7v70rgsq4a" path="res://Watermelon_hub.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://cqvad0twbcffh" path="res://locked_hub.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://0h7v70rgsq4a" path="res://HubScenes/Watermelon_hub.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cqvad0twbcffh" path="res://HubScenes/locked_hub.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://qsh5ex8amf17" path="res://Assets/backroundshop[.glb" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b40ofein6d2i7" path="res://requests.tscn" id="5_7mycd"]
+[ext_resource type="PackedScene" uid="uid://cm5h2fw0ummdo" path="res://Assets/backround.glb" id="6_272bh"]
+[ext_resource type="Script" uid="uid://bov6t1og3te1g" path="res://label_3d.gd" id="7_272bh"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_5vw27"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kek77"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_0xm2m")
@@ -27,5 +34,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -18, -5)
 [node name="locked hub" parent="." instance=ExtResource("3_h2yge")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, -18, -5)
 
-[node name="backroundshop[" parent="." instance=ExtResource("4_1bvp3")]
+[node name="shopbackround" parent="." instance=ExtResource("4_1bvp3")]
 transform = Transform3D(-1.23806e-08, 0, -0.283236, 0, 0.283236, 0, 0.283236, 0, -1.23806e-08, -8.21078, -14.9321, -1.51842)
+
+[node name="Requestboard" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.5292, -14.2549, -6.71082)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Requestboard"]
+mesh = SubResource("QuadMesh_5vw27")
+surface_material_override/0 = SubResource("StandardMaterial3D_kek77")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Requestboard"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Requests" parent="Requestboard/SubViewportContainer" instance=ExtResource("5_7mycd")]
+handle_input_locally = false
+size = Vector2i(350, 420)
+render_target_update_mode = 4
+
+[node name="backround" parent="." instance=ExtResource("6_272bh")]
+transform = Transform3D(2.13077, 0, 0, 0, 1.13515, 0, 0, 0, 1.55362, -0.882221, -19.9835, -2.78618)
+
+[node name="giblits" type="Label3D" parent="."]
+transform = Transform3D(2.139, 0, 0, 0, 3.29224e-08, 2.38472, 0, -2.76081, 2.84374e-08, -11.7429, -14.6654, -0.336482)
+text = "Giblits :"
+script = ExtResource("7_272bh")
