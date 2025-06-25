@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqvad0twbcffh"]
+
+[ext_resource type="Script" uid="uid://dnbjypkyrv0qn" path="res://HubScenes/locked_hub.gd" id="1_q21jf"]
+[ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="2_f7oo5"]
+[ext_resource type="PackedScene" uid="uid://jfnqw4drhp7s" path="res://lockedhub_2.tscn" id="3_arj4e"]
+[ext_resource type="PackedScene" uid="uid://vsyeeg7u34h1" path="res://Assets/lock.glb" id="3_dsocg"]
+[ext_resource type="PackedScene" uid="uid://cabndw1fa45wv" path="res://HubScenes/kiwihub.tscn" id="4_f7oo5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q21jf"]
+
+[node name="locked hub" type="Node3D"]
+script = ExtResource("1_q21jf")
+kiwihub = ExtResource("4_f7oo5")
+lockedhub2 = ExtResource("3_arj4e")
+
+[node name="hub" parent="." instance=ExtResource("2_f7oo5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0243788, -0.0148144, -0.00839043)
+
+[node name="lock" parent="." instance=ExtResource("3_dsocg")]
+transform = Transform3D(0.574609, 0, 0, 0, 0.574609, 0, 0, 0, 0.574609, 1.63639, 2.24846, 1.98346)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(4.13742, 0, 0, 0, 4.13742, 0, 0, 0, 4.13742, -0.0153446, 0.924752, 0.116015)
+shape = SubResource("BoxShape3D_q21jf")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

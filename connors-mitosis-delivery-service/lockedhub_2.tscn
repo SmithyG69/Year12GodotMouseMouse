@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://jfnqw4drhp7s"]
+
+[ext_resource type="Script" uid="uid://07s5h6g4qyun" path="res://HubScenes/lockedhub2.gd" id="1_8hs2h"]
+[ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="2_fajk6"]
+[ext_resource type="PackedScene" uid="uid://vsyeeg7u34h1" path="res://Assets/lock.glb" id="3_tf276"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5xxqs"]
+
+[node name="lockedhub2" type="Node3D"]
+script = ExtResource("1_8hs2h")
+
+[node name="hub" parent="." instance=ExtResource("2_fajk6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0243788, -0.0148144, -0.00839043)
+
+[node name="lock" parent="." instance=ExtResource("3_tf276")]
+transform = Transform3D(0.574609, 0, 0, 0, 0.574609, 0, 0, 0, 0.574609, 1.63639, 2.24846, 1.98346)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(4.13742, 0, 0, 0, 4.13742, 0, 0, 0, 4.13742, -0.0153446, 0.924752, 0.116015)
+shape = SubResource("BoxShape3D_5xxqs")
