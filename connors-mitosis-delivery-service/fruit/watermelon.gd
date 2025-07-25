@@ -18,7 +18,6 @@ func random_vector(range = 1):
 
 
 func _ready() -> void:
-	print("new kiwi")
 	add_to_group("bouncer")
 	add_to_group("kiwi")
 	$"spawn timer".timeout.connect(_on_spawn_timer_timeout)
