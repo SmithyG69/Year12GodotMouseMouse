@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bfcvkx8u4ajgf"]
+[gd_scene load_steps=5 format=3 uid="uid://bfcvkx8u4ajgf"]
 
 [ext_resource type="Script" uid="uid://glt88u468ont" path="res://fruit/watermelon.gd" id="1_uqt3a"]
 [ext_resource type="PackedScene" uid="uid://k7fm404u5lqb" path="res://Assets/Castle (1).glb" id="2_2o74k"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uqt3a"]
+friction = 0.0
+bounce = 18.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6apsg"]
 
 [node name="watermelon" type="RigidBody3D" groups=["bouncer"]]
 collision_mask = 2
+axis_lock_linear_y = true
+physics_material_override = SubResource("PhysicsMaterial_uqt3a")
+gravity_scale = 0.0
 script = ExtResource("1_uqt3a")
 
 [node name="Castle (1)" parent="." instance=ExtResource("2_2o74k")]
