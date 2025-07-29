@@ -4,7 +4,7 @@
 
 [node name="Requests" type="SubViewport"]
 
-[node name="request pannel" type="Control" parent="."]
+[node name="request pannel2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -18,7 +18,7 @@ offset_bottom = 31.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="request pannel"]
+[node name="Button" type="Button" parent="request pannel2"]
 layout_mode = 2
 offset_top = 54.0
 offset_right = 59.0
@@ -26,17 +26,17 @@ offset_bottom = 62.0
 text = "complete"
 script = ExtResource("1_owrvt")
 
-[node name="requestlabel" type="Label" parent="request pannel"]
+[node name="requestlabel" type="Label" parent="request pannel2"]
 layout_mode = 2
 offset_top = 27.0
 offset_right = 59.0
 offset_bottom = 50.0
 text = "request"
 
-[node name="rewardlabel" type="Label" parent="request pannel"]
+[node name="rewardlabel" type="Label" parent="request pannel2"]
 layout_mode = 2
 offset_right = 59.0
 offset_bottom = 23.0
 text = "Reward"
 
-[connection signal="pressed" from="request pannel/Button" to="request pannel/Button" method="_on_pressed"]
+[connection signal="pressed" from="request pannel2/Button" to="request pannel2/Button" method="_on_pressed"]

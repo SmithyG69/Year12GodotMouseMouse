@@ -9,7 +9,7 @@ bounce = 18.0
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_6apsg"]
 
-[node name="watermelon" type="RigidBody3D" groups=["bouncer"]]
+[node name="watermelon" type="RigidBody3D" groups=["bouncer", "melon"]]
 collision_mask = 2
 axis_lock_linear_y = true
 physics_material_override = SubResource("PhysicsMaterial_uqt3a")

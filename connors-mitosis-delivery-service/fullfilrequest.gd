@@ -1,4 +1,4 @@
-extends Button
+extends Area3D
 
 @export var fruit_name: String = "watermelon"
 @export var floating_text_scene: PackedScene
@@ -7,8 +7,9 @@ extends Button
 @onready var request_label: Label = $"../requestlabel"
 @onready var reward_label: Label = $"../rewardlabel"
 
-func _on_pressed() -> void:
-	attempt_fulfill_watermelon_request()
+func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+		attempt_fulfill_watermelon_request()
+
 
 func attempt_fulfill_watermelon_request():
 	var current_watermelon = get_tree().get_nodes_in_group("melon").size()
@@ -22,7 +23,3 @@ func attempt_fulfill_watermelon_request():
 		
 	else:
 		return
-
-func _ready():
-	request_label.text = "Need " + str(required_amount) + " Melons"
-	reward_label.text  = "+ " + str(reward_giblits) + " Giblits"
