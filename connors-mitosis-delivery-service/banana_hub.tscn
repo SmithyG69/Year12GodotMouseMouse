@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://63hftx0ilfgy"]
+
+[ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="1_yb0px"]
+[ext_resource type="PackedScene" uid="uid://brxnhyygg1jmt" path="res://banana.tscn" id="2_87j6b"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_87j6b"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uj5u7"]
+size = Vector3(0.504883, 3.64185, 3.97461)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f5vtp"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dxwyw"]
+size = Vector3(0.730957, 2.83002, 3.49707)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q4l0e"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8kdfp"]
+size = Vector3(3.86131, 2.94525, 0.623169)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dc3bk"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ecvue"]
+size = Vector3(4.43997, 3.164, 0.627991)
+
+[node name="banana hub" type="Node3D"]
+
+[node name="left wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_87j6b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="left wall"]
+transform = Transform3D(1.00848, 0, 0, 0, 1.00848, 0, 0, 0, 1.00848, -1.9368, 0.000854492, -0.0459248)
+shape = SubResource("BoxShape3D_uj5u7")
+
+[node name="right wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_f5vtp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="right wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02979, 0.246979, 0.0395508)
+shape = SubResource("BoxShape3D_dxwyw")
+
+[node name="top wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_q4l0e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="top wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10656, 0.202057, -1.9673)
+shape = SubResource("BoxShape3D_8kdfp")
+
+[node name="bottom wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_dc3bk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bottom wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206894, 0.10733, 1.98301)
+shape = SubResource("BoxShape3D_ecvue")
+
+[node name="hub" parent="." instance=ExtResource("1_yb0px")]
+
+[node name="Node3D" parent="." instance=ExtResource("2_87j6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.054207, 0, 0.00293759)
