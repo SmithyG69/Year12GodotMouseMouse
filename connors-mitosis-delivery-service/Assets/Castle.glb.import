@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cm6ka34o2iedo"
-path="res://.godot/imported/Lock.glb-9ad5e27ba449d4c4127e6976414c2d1a.scn"
+uid="uid://dprwry48gvd0n"
+path="res://.godot/imported/Castle.glb-08fb6042b627ed00b453a78409af7f88.scn"
 
 [deps]
 
-source_file="res://Assets/Lock.glb"
-dest_files=["res://.godot/imported/Lock.glb-9ad5e27ba449d4c4127e6976414c2d1a.scn"]
+source_file="res://Assets/Castle.glb"
+dest_files=["res://.godot/imported/Castle.glb-08fb6042b627ed00b453a78409af7f88.scn"]
 
 [params]
 

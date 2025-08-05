@@ -22,7 +22,7 @@ func _ready() -> void:
 	add_to_group("kiwi")
 	$"spawn timer".timeout.connect(_on_spawn_timer_timeout)
 	#direction = random_vector(2)
-	linear_velocity = random_vector() * 3
+	linear_velocity = random_vector() * 2
 	#apply_central_impulse(random_vector()*2)
 	
 func _physics_process(delta):

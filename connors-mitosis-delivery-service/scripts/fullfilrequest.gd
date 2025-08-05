@@ -4,11 +4,13 @@ extends Area3D
 @export var floating_text_scene: PackedScene
 @export var required_amount = 7
 @export var reward_giblits = 120
-@onready var request_label: Label = $"../requestlabel"
-@onready var reward_label: Label = $"../rewardlabel"
+#@onready var request_label: Label = $"../requestlabel"
+#@onready var reward_label: Label = $"../rewardlabel"
 
 func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+		print("clicked complete")
 		attempt_fulfill_watermelon_request()
+
 
 
 func attempt_fulfill_watermelon_request():

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ciekk6t56fx1"
-path="res://.godot/imported/kiwi.glb-66baaf4c2734abb65528e56832955c40.scn"
+uid="uid://beqqrbuyc1lhq"
+path="res://.godot/imported/melon for sir (1).glb-75eb46ada18f9de135c814d783623c89.scn"
 
 [deps]
 
-source_file="res://kiwi.glb"
-dest_files=["res://.godot/imported/kiwi.glb-66baaf4c2734abb65528e56832955c40.scn"]
+source_file="res://Assets/melon for sir (1).glb"
+dest_files=["res://.godot/imported/melon for sir (1).glb-75eb46ada18f9de135c814d783623c89.scn"]
 
 [params]
 

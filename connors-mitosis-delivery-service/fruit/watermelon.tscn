@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bfcvkx8u4ajgf"]
 
 [ext_resource type="Script" uid="uid://glt88u468ont" path="res://fruit/watermelon.gd" id="1_uqt3a"]
-[ext_resource type="PackedScene" uid="uid://k7fm404u5lqb" path="res://Assets/Castle (1).glb" id="2_2o74k"]
+[ext_resource type="PackedScene" uid="uid://beqqrbuyc1lhq" path="res://Assets/melon for sir (1).glb" id="2_uqt3a"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uqt3a"]
 friction = 0.0
@@ -16,12 +16,12 @@ physics_material_override = SubResource("PhysicsMaterial_uqt3a")
 gravity_scale = 0.0
 script = ExtResource("1_uqt3a")
 
-[node name="Castle (1)" parent="." instance=ExtResource("2_2o74k")]
-transform = Transform3D(0.708568, -0.17422, 0.014279, 0.168682, 0.697107, 0.134955, -0.0458555, -0.127726, 0.717083, 0.327374, 0.189693, 0.341493)
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_6apsg")
 
 [node name="spawn timer" type="Timer" parent="."]
 wait_time = 15.0
 autostart = true
+
+[node name="melon for sir (1)" parent="." instance=ExtResource("2_uqt3a")]
+transform = Transform3D(0.708944, 0, 0, 0, 0.924182, 0, 0, 0, 0.649628, -2.18968, 0.223287, 0.237416)

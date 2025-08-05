@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b40ofein6d2i7"]
 
-[ext_resource type="Script" uid="uid://wj20xo1gqifw" path="res://fullfilrequest.gd" id="1_owrvt"]
+[ext_resource type="Script" uid="uid://wj20xo1gqifw" path="res://scripts/fullfilrequest.gd" id="1_owrvt"]
 
 [node name="Requests" type="SubViewport"]
 

@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ctnc7hmg5c2hs"
-path="res://.godot/imported/button.glb-248c1b52077fe8a379cc3e8c7297e65d.scn"
+uid="uid://ciekk6t56fx1"
+path="res://.godot/imported/kiwi.glb-59c96aa67dcf6520f76349160a8cfb66.scn"
 
 [deps]
 
-source_file="res://button.glb"
-dest_files=["res://.godot/imported/button.glb-248c1b52077fe8a379cc3e8c7297e65d.scn"]
+source_file="res://Assets/kiwi.glb"
+dest_files=["res://.godot/imported/kiwi.glb-59c96aa67dcf6520f76349160a8cfb66.scn"]
 
 [params]
 

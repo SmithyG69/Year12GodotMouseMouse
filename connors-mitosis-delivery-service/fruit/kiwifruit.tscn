@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bxibpfkv4ddmm"]
 
 [ext_resource type="Script" uid="uid://bqne67tlputdt" path="res://fruit/kiwifruit.gd" id="1_i72m1"]
-[ext_resource type="PackedScene" uid="uid://ciekk6t56fx1" path="res://kiwi.glb" id="2_o65ci"]
+[ext_resource type="PackedScene" uid="uid://ciekk6t56fx1" path="res://Assets/kiwi.glb" id="2_o65ci"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jvnav"]
 friction = 0.0

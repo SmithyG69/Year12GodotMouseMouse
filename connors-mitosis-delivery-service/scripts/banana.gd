@@ -14,13 +14,12 @@ func random_vector(range = 1):
 	return random_vec.normalized()
 	print(random_vec)
 
-
 func _ready() -> void:
 	add_to_group("bouncer")
 	add_to_group("banana")
 	$"spawn timer banana".timeout.connect(_on_spawn_timer_timeout)
 	#direction = random_vector(2)
-	linear_velocity = random_vector() * 3
+	linear_velocity = random_vector() * 2
 	#apply_central_impulse(random_vector()*2)
 	
 func _physics_process(delta):
@@ -29,7 +28,6 @@ func _physics_process(delta):
 	#move_and_slide()
 	rotate_x(1.2 * delta)
 	rotate_y(1.2 * delta)
-	#direction.y = 0
 	if linear_velocity.length() < 4:
 		apply_impulse(linear_velocity)
 	linear_velocity.clamp(Vector3(3,3,3), Vector3(-3,-3,-3))
@@ -41,7 +39,7 @@ func _physics_process(delta):
 		#"y": direction.y *= -1
 
 func _on_spawn_timer_timeout():
-	var current_banana = get_tree().get_nodes_in_group("kiwi").size()
+	var current_banana = get_tree().get_nodes_in_group("banana").size()
 	
 	if current_banana < max_banana:
 		var new_banana = banana.instantiate()
