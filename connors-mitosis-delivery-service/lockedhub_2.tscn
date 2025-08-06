@@ -23,6 +23,6 @@ transform = Transform3D(4.13742, 0, 0, 0, 4.13742, 0, 0, 0, 4.13742, -0.0153446,
 shape = SubResource("BoxShape3D_5xxqs")
 
 [node name="Lock Without Hub" parent="." instance=ExtResource("5_tf276")]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 1.86508, 0, 0.0762724)
+transform = Transform3D(-3.84204e-08, -0.828624, 0, 0.878956, -3.62203e-08, 0, 0, 0, 0.862791, 2.42093, 1.6996, 0.0762724)
 
 [connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

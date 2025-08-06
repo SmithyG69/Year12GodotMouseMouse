@@ -69,4 +69,3 @@ shape = SubResource("BoxShape3D_ecvue")
 
 [node name="Node3D" parent="." instance=ExtResource("2_87j6b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0866702, 0.488256, 0.00309381)
-gravity_scale = 0.0
