@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://1j71qj7xhhlo"]
+
+[ext_resource type="Script" uid="uid://yd2o6bjajpnf" path="res://loading_screen.gd" id="1_htrc2"]
+[ext_resource type="VideoStream" uid="uid://dpwq4yswii2ut" path="res://Timeline 1.ogv" id="2_weff3"]
+
+[node name="Node2D" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_htrc2")
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+stream = ExtResource("2_weff3")
