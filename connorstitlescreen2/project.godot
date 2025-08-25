@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="ConnorsTitleScreen2"
-run/main_scene="res://loading_screen.tscn"
+run/main_scene="res://TItle/loading_screen.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://TItle/icon.svg"
 
 [display]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bjqtmobyw6hfw"]
 
-[ext_resource type="Script" uid="uid://bbkwpfgbygt7e" path="res://titlescreenroot.gd" id="1_jbubk"]
-[ext_resource type="Script" uid="uid://qhx8g4hixde5" path="res://UI.gd" id="2_ri4db"]
-[ext_resource type="Script" uid="uid://bhesism4e5kf7" path="res://fruit_spawner.gd" id="3_ne6se"]
-[ext_resource type="FontFile" uid="uid://faki70p2q5r8" path="res://Fullgiblets-Regular.otf" id="3_pg1o3"]
-[ext_resource type="PackedScene" uid="uid://bvrgqgr28t1am" path="res://Fruit.tscn" id="4_pg1o3"]
+[ext_resource type="Script" uid="uid://bbkwpfgbygt7e" path="res://TItle/titlescreenroot.gd" id="1_jbubk"]
+[ext_resource type="Script" uid="uid://qhx8g4hixde5" path="res://TItle/UI.gd" id="2_ri4db"]
+[ext_resource type="Script" uid="uid://bhesism4e5kf7" path="res://TItle/fruit_spawner.gd" id="3_ne6se"]
+[ext_resource type="FontFile" uid="uid://faki70p2q5r8" path="res://TItle/Fullgiblets-Regular.otf" id="3_pg1o3"]
+[ext_resource type="PackedScene" uid="uid://bvrgqgr28t1am" path="res://TItle/Fruit.tscn" id="4_pg1o3"]
 
 [sub_resource type="Environment" id="Environment_pj8lm"]
 background_mode = 1

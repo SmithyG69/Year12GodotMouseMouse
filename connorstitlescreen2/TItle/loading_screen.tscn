@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://1j71qj7xhhlo"]
 
-[ext_resource type="Script" uid="uid://yd2o6bjajpnf" path="res://loading_screen.gd" id="1_htrc2"]
+[ext_resource type="Script" uid="uid://yd2o6bjajpnf" path="res://TItle/loading_screen.gd" id="1_htrc2"]
 [ext_resource type="VideoStream" uid="uid://dpwq4yswii2ut" path="res://Timeline 1.ogv" id="2_weff3"]
 
 [node name="Node2D" type="Control"]

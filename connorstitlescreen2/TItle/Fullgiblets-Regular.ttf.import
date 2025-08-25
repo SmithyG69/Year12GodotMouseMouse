@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://faki70p2q5r8"
-path="res://.godot/imported/Fullgiblets-Regular.otf-17c4fd7be872dc2195f300adff58f54e.fontdata"
+uid="uid://dy4lagrmplov6"
+path="res://.godot/imported/Fullgiblets-Regular.ttf-d711e684cabb6615995d6dfe7ae90499.fontdata"
 
 [deps]
 
-source_file="res://Fullgiblets-Regular.otf"
-dest_files=["res://.godot/imported/Fullgiblets-Regular.otf-17c4fd7be872dc2195f300adff58f54e.fontdata"]
+source_file="res://TItle/Fullgiblets-Regular.ttf"
+dest_files=["res://.godot/imported/Fullgiblets-Regular.ttf-d711e684cabb6615995d6dfe7ae90499.fontdata"]
 
 [params]
 
