@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://qhx8g4hixde5" path="res://UI.gd" id="2_ri4db"]
 [ext_resource type="Script" uid="uid://bhesism4e5kf7" path="res://fruit_spawner.gd" id="3_ne6se"]
 [ext_resource type="FontFile" uid="uid://faki70p2q5r8" path="res://Fullgiblets-Regular.otf" id="3_pg1o3"]
-[ext_resource type="PackedScene" uid="uid://bvrgqgr28t1am" path="res://Fruit.tscn" id="4_pg1o3"]
+[ext_resource type="PackedScene" uid="uid://eta6uxad75xw" path="res://watermelon_titleScreen.tscn" id="5_1xscl"]
 
 [sub_resource type="Environment" id="Environment_pj8lm"]
 background_mode = 1
@@ -83,4 +83,4 @@ text = "Exit"
 
 [node name="FruitSpawner" type="Node3D" parent="."]
 script = ExtResource("3_ne6se")
-fruit_scene = ExtResource("4_pg1o3")
+fruit_scene = ExtResource("5_1xscl")

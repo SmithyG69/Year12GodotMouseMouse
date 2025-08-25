@@ -1,31 +1,31 @@
-[gd_scene load_steps=47 format=4 uid="uid://bfcvkx8u4ajgf"]
+[gd_scene load_steps=47 format=4 uid="uid://eta6uxad75xw"]
 
-[ext_resource type="Script" uid="uid://glt88u468ont" path="res://fruit/watermelon.gd" id="1_uqt3a"]
-[ext_resource type="Texture2D" uid="uid://cpppcqtujigk8" path="res://Assets/melon for sir (1)_BakeTexture.png" id="2_uqt3a"]
+[ext_resource type="Texture2D" uid="uid://cpppcqtujigk8" path="res://Assets/melon for sir (1)_BakeTexture.png" id="1_7yv2q"]
+[ext_resource type="Script" uid="uid://ce1felw83mk6l" path="res://fruit.gd" id="1_111rq"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uqt3a"]
-friction = 0.0
-bounce = 18.0
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ojx6h"]
+friction = 0.25
+bounce = 0.8
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_6apsg"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_5mskd"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2o74k"]
 resource_name = "Material"
 cull_mode = 2
-albedo_texture = ExtResource("2_uqt3a")
+albedo_texture = ExtResource("1_7yv2q")
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0yto"]
 resource_name = "Material.001"
 cull_mode = 2
 albedo_color = Color(0.517572, 0.906498, 0.501034, 1)
-albedo_texture = ExtResource("2_uqt3a")
+albedo_texture = ExtResource("1_7yv2q")
 roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jwkay"]
 resource_name = "Material.002"
 cull_mode = 2
-albedo_texture = ExtResource("2_uqt3a")
+albedo_texture = ExtResource("1_7yv2q")
 roughness = 0.4
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_uqt3a"]
@@ -62,7 +62,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_rhabo"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_cnqe5"]
 resource_name = "melon for sir (1)_Circle_002"
 _surfaces = [{
 "aabb": AABB(-0.872798, -0.156737, 0, 0.872798, 0.156737, 0.872798),
@@ -125,7 +125,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_s2u1v"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_iv5tm"]
 resource_name = "melon for sir (1)_Sphere_038"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -159,7 +159,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_j5iww"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ud5df"]
 resource_name = "melon for sir (1)_Sphere_039"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -193,7 +193,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_thgve"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_yld6t"]
 resource_name = "melon for sir (1)_Sphere_040"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -227,7 +227,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_s76b0"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_ctxtb"]
 resource_name = "melon for sir (1)_Sphere_041"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -261,7 +261,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jpmov"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_klsnb"]
 resource_name = "melon for sir (1)_Sphere_042"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -295,7 +295,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_b8r2u"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_urhod"]
 resource_name = "melon for sir (1)_Sphere_043"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -329,7 +329,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ppa4n"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_b8mtx"]
 resource_name = "melon for sir (1)_Sphere_044"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -363,7 +363,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jr4iu"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_t27fc"]
 resource_name = "melon for sir (1)_Sphere_045"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -397,7 +397,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_jw6qf"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_dg2nh"]
 resource_name = "melon for sir (1)_Sphere_046"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -431,7 +431,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_vo6gt"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_m8xxw"]
 resource_name = "melon for sir (1)_Sphere_047"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -465,7 +465,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_10ool"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_41sme"]
 resource_name = "melon for sir (1)_Sphere_048"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -499,7 +499,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_yx0i6"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_qim6u"]
 resource_name = "melon for sir (1)_Sphere_049"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -533,7 +533,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_lytrt"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_t3n4c"]
 resource_name = "melon for sir (1)_Sphere_050"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -567,7 +567,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_ayq8l"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_1hg6g"]
 resource_name = "melon for sir (1)_Sphere_051"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -601,7 +601,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_bxret"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_4ruk4"]
 resource_name = "melon for sir (1)_Sphere_052"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -635,7 +635,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_bhxlu"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_eu5qb"]
 resource_name = "melon for sir (1)_Sphere_053"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -669,7 +669,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_eymmf"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_bkrtk"]
 resource_name = "melon for sir (1)_Sphere_054"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -703,7 +703,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_gtgg3"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_21igq"]
 resource_name = "melon for sir (1)_Sphere_055"
 _surfaces = [{
 "aabb": AABB(-0.999999, -1, -1, 2, 2.9, 2),
@@ -722,114 +722,112 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_8db4m")
 
-[node name="watermelon" type="RigidBody3D" groups=["bouncer", "melon"]]
-collision_mask = 2
-axis_lock_linear_y = true
-physics_material_override = SubResource("PhysicsMaterial_uqt3a")
-gravity_scale = 0.0
-script = ExtResource("1_uqt3a")
+[node name="RigidBody3D" type="RigidBody3D"]
+physics_material_override = SubResource("PhysicsMaterial_ojx6h")
+can_sleep = false
+continuous_cd = true
+linear_damp = 0.05
+angular_damp = 0.05
+script = ExtResource("1_111rq")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_6apsg")
-
-[node name="spawn timer" type="Timer" parent="."]
-wait_time = 2.0
-autostart = true
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_5mskd")
 
 [node name="melon for sir (1)" type="Node3D" parent="."]
-transform = Transform3D(0.708944, 0, 0, 0, 0.924182, 0, 0, 0, 0.649628, -2.18968, 0.223287, 0.237416)
+transform = Transform3D(1.20596, 0, 0, 0, 1.57209, 0, 0, 0, 1.10506, -3.85848, 0.168799, 0.530557)
 
 [node name="Circle_001" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(5.36442e-07, 0, -1, 0, 1, 0, 1, 0, 5.36442e-07, 3.47392, 0, -0.00342084)
-mesh = SubResource("ArrayMesh_rhabo")
+mesh = SubResource("ArrayMesh_cnqe5")
 skeleton = NodePath("")
 
 [node name="Sphere_018" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 2.75234, -0.00345767, -0.149127)
-mesh = SubResource("ArrayMesh_s2u1v")
+mesh = SubResource("ArrayMesh_iv5tm")
 skeleton = NodePath("")
 
 [node name="Sphere_019" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 2.7991, -0.00345767, -0.37186)
-mesh = SubResource("ArrayMesh_j5iww")
+mesh = SubResource("ArrayMesh_ud5df")
 skeleton = NodePath("")
 
 [node name="Sphere_020" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.04946, -0.00345767, -0.37186)
-mesh = SubResource("ArrayMesh_thgve")
+mesh = SubResource("ArrayMesh_yld6t")
 skeleton = NodePath("")
 
 [node name="Sphere_021" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.08166, -0.00345767, -0.61787)
-mesh = SubResource("ArrayMesh_s76b0")
+mesh = SubResource("ArrayMesh_ctxtb")
 skeleton = NodePath("")
 
 [node name="Sphere_022" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 2.88226, -0.00345767, -0.513)
-mesh = SubResource("ArrayMesh_jpmov")
+mesh = SubResource("ArrayMesh_klsnb")
 skeleton = NodePath("")
 
 [node name="Sphere_023" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.31001, -0.00345767, -0.61787)
-mesh = SubResource("ArrayMesh_b8r2u")
+mesh = SubResource("ArrayMesh_urhod")
 skeleton = NodePath("")
 
 [node name="Sphere_024" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.24891, -0.00345767, -0.430464)
-mesh = SubResource("ArrayMesh_ppa4n")
+mesh = SubResource("ArrayMesh_b8mtx")
 skeleton = NodePath("")
 
 [node name="Sphere_025" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 2.98959, -0.00345767, -0.174051)
-mesh = SubResource("ArrayMesh_jr4iu")
+mesh = SubResource("ArrayMesh_t27fc")
 skeleton = NodePath("")
 
 [node name="Sphere_026" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.30695, -0.00345767, -0.174051)
-mesh = SubResource("ArrayMesh_jw6qf")
+mesh = SubResource("ArrayMesh_dg2nh")
 skeleton = NodePath("")
 
 [node name="Sphere_027" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 2.75234, -0.153296, -0.149127)
-mesh = SubResource("ArrayMesh_vo6gt")
+mesh = SubResource("ArrayMesh_m8xxw")
 skeleton = NodePath("")
 
 [node name="Sphere_028" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 2.7991, -0.153296, -0.37186)
-mesh = SubResource("ArrayMesh_10ool")
+mesh = SubResource("ArrayMesh_41sme")
 skeleton = NodePath("")
 
 [node name="Sphere_029" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.04946, -0.153296, -0.37186)
-mesh = SubResource("ArrayMesh_yx0i6")
+mesh = SubResource("ArrayMesh_qim6u")
 skeleton = NodePath("")
 
 [node name="Sphere_030" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.08166, -0.153296, -0.61787)
-mesh = SubResource("ArrayMesh_lytrt")
+mesh = SubResource("ArrayMesh_t3n4c")
 skeleton = NodePath("")
 
 [node name="Sphere_031" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 2.88226, -0.153296, -0.513)
-mesh = SubResource("ArrayMesh_ayq8l")
+mesh = SubResource("ArrayMesh_1hg6g")
 skeleton = NodePath("")
 
 [node name="Sphere_032" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.31001, -0.153296, -0.61787)
-mesh = SubResource("ArrayMesh_bxret")
+mesh = SubResource("ArrayMesh_4ruk4")
 skeleton = NodePath("")
 
 [node name="Sphere_033" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.24891, -0.153296, -0.430464)
-mesh = SubResource("ArrayMesh_bhxlu")
+mesh = SubResource("ArrayMesh_eu5qb")
 skeleton = NodePath("")
 
 [node name="Sphere_034" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 2.98959, -0.153296, -0.174051)
-mesh = SubResource("ArrayMesh_eymmf")
+mesh = SubResource("ArrayMesh_bkrtk")
 skeleton = NodePath("")
 
 [node name="Sphere_035" type="MeshInstance3D" parent="melon for sir (1)"]
 transform = Transform3D(-3.99888e-09, 0.0237199, -0.0237199, -0.033545, -3.53454e-09, 2.12072e-09, -9.99719e-10, 0.0237199, 0.0237199, 3.30695, -0.153296, -0.174051)
-mesh = SubResource("ArrayMesh_gtgg3")
+mesh = SubResource("ArrayMesh_21igq")
 skeleton = NodePath("")
