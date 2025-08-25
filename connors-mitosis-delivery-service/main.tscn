@@ -1,0 +1,221 @@
+[gd_scene load_steps=25 format=4 uid="uid://d1eo05rwiless"]
+
+[ext_resource type="Script" uid="uid://cqeoa1hsy83mb" path="res://scripts/main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://0h7v70rgsq4a" path="res://HubScenes/Watermelon_hub.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cabndw1fa45wv" path="res://HubScenes/kiwihub.tscn" id="3_4c57u"]
+[ext_resource type="PackedScene" uid="uid://cqvad0twbcffh" path="res://HubScenes/locked_hub.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://qsh5ex8amf17" path="res://Assets/backroundshop[.glb" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://jfnqw4drhp7s" path="res://lockedhub_2.tscn" id="4_efxa6"]
+[ext_resource type="Script" uid="uid://bov6t1og3te1g" path="res://scripts/label_3d.gd" id="7_272bh"]
+[ext_resource type="FontFile" uid="uid://dy4lagrmplov6" path="res://Fullgiblets-Regular.ttf" id="7_vivmo"]
+[ext_resource type="Texture2D" uid="uid://dxtokiwgwampe" path="res://Screenshot 2025-08-12 at 10.29.52 AM.png" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://quvtuaoe2aem" path="res://watermelon_upgrade.gd" id="11_dg77c"]
+[ext_resource type="Script" uid="uid://cxei7exkoh36q" path="res://mesh_instance_3d.gd" id="12_ycdy4"]
+[ext_resource type="Script" uid="uid://cku5rl34r534g" path="res://kiwi_upgrade.gd" id="13_w48qg"]
+[ext_resource type="Script" uid="uid://bk42lou1755pi" path="res://request_label.gd" id="13_ycdy4"]
+[ext_resource type="Script" uid="uid://bxi6jh43ua6i4" path="res://orange_upgrade.gd" id="14_vivmo"]
+[ext_resource type="Script" uid="uid://knlgrdp46dr1" path="res://orange_upgrade1.gd" id="15_2cqfq"]
+
+[sub_resource type="TextMesh" id="TextMesh_2cqfq"]
+text = "Glibits:"
+font = ExtResource("7_vivmo")
+
+[sub_resource type="TextMesh" id="TextMesh_w48qg"]
+text = "Request: "
+font = ExtResource("7_vivmo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_efxa6"]
+albedo_texture = ExtResource("10_4c57u")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_dg77c"]
+material = SubResource("StandardMaterial3D_efxa6")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_w48qg"]
+size = Vector3(2.11182, 0.873535, 1.01602)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d18en"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_irjrc"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAAGAAIAAAAHAAYABQACAAYABwAFAAYAAwAAAAIABwAAAAMABQAEAAIAAwACAAQABwABAAUABwADAAEAAQAEAAUAAQADAAQA"),
+"lods": [1.06904, PackedByteArray("AAABAAIAAQAAAAMAAwAAAAIAAQADAAQAAwACAAQAAQAFAAIABQAEAAIAAQAEAAUA")],
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAA/////wAA//8AAP//AAD///////8AAP////8AAAAAAAD//wAAAAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_vivmo"]
+resource_name = "button_Cube_001"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("/1////9f/3//n////5//f/+f/z//3/8//1//P/8f/z//nwAA/18AAP+f/7//X/+//9//f/8f/38="),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAAKAAIAAAALAAoACwADAAoACwABAAMAAwAFAAwAAwAEAAUAAQAEAAMAAQAGAAQABgAIAAQABgAJAAgADQAGAAEADQAHAAYA"),
+"lods": [1.06904, PackedByteArray("AAABAAIAAQADAAIAAQAEAAMAAwAEAAUAAQAGAAQAAQAHAAYABgAIAAQABgAJAAgA")],
+"material": SubResource("StandardMaterial3D_d18en"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("AAAAAP//c9H//wAAAADq2gAA/////0rA/////wAA+vT///////8E3QAA/////4f2//8AAP//gLYAAAAA//8/qAAA/////0rAAAAAAP//c9EAAP//AABv2QAAAAAAABr7AAD//wAA4ugAAAAAAACT4TDQs/njJzBLufjFyDg9eiBmKbIMgmibnmsRyzicQhmvufjFyDDQs/n6yua6+spQ1xh1zNKxJ5+L")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_irjrc")
+
+[sub_resource type="TextMesh" id="TextMesh_yaehf"]
+text = "Upgrade"
+font = ExtResource("7_vivmo")
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_0xm2m")
+
+[node name="WorldRoot" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldRoot"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 18.6229, 0)
+current = true
+fov = 25.0
+size = 18.1817
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 19.2068, 0)
+
+[node name="locked hub" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, -18, -5)
+kiwihub = ExtResource("3_4c57u")
+lockedhub2 = ExtResource("4_efxa6")
+
+[node name="shopbackround" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(-1.23806e-08, 0, -0.283236, 0, 0.283236, 0, 0.283236, 0, -1.23806e-08, -8.21078, -14.9321, -1.51842)
+
+[node name="Hub" parent="." instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -18, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.02735, 0, 0, 0, 0.123117, 2.96554, 0, -4.383, 0.0833011, -10.6865, -14.1233, 0.210102)
+mesh = SubResource("TextMesh_2cqfq")
+script = ExtResource("7_272bh")
+
+[node name="request label" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.22038, 0, 0, 0, -0.222854, 3.62282, 0, -3.08481, -0.261721, -11.0519, -14.5788, -5.92468)
+mesh = SubResource("TextMesh_w48qg")
+script = ExtResource("13_ycdy4")
+
+[node name="shop" type="Node3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(15, 0, 0, 0, 0.939, 0, 0, 0, 15, 0, -21.2022, 0)
+mesh = SubResource("PlaneMesh_dg77c")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Watermelon_upgrade" type="Area3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.165938)
+script = ExtResource("11_dg77c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Watermelon_upgrade"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
+shape = SubResource("BoxShape3D_w48qg")
+
+[node name="Cube" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 1.10302)
+mesh = SubResource("ArrayMesh_vivmo")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube"]
+transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
+mesh = SubResource("TextMesh_yaehf")
+script = ExtResource("12_ycdy4")
+
+[node name="kiwi_upgrade" type="Area3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.33746)
+script = ExtResource("13_w48qg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/kiwi_upgrade"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
+shape = SubResource("BoxShape3D_w48qg")
+
+[node name="orange_upgrade" type="Area3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.67405)
+script = ExtResource("14_vivmo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/orange_upgrade"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
+shape = SubResource("BoxShape3D_w48qg")
+
+[node name="Cube2" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 3.94301)
+mesh = SubResource("ArrayMesh_vivmo")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube2"]
+transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
+mesh = SubResource("TextMesh_yaehf")
+script = ExtResource("12_ycdy4")
+
+[node name="orange_upgrade4" type="Area3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.01734)
+script = ExtResource("15_2cqfq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/orange_upgrade4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
+shape = SubResource("BoxShape3D_w48qg")
+
+[node name="Cube3" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 5.2863)
+mesh = SubResource("ArrayMesh_vivmo")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube3"]
+transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
+mesh = SubResource("TextMesh_yaehf")
+script = ExtResource("12_ycdy4")
+
+[node name="banana_upgrade" type="Area3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.41344)
+script = ExtResource("11_dg77c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/banana_upgrade"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
+shape = SubResource("BoxShape3D_w48qg")
+
+[node name="Cube4" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 6.82765)
+mesh = SubResource("ArrayMesh_vivmo")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube4"]
+transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
+mesh = SubResource("TextMesh_yaehf")
+skeleton = NodePath("../../Cube4")
+script = ExtResource("12_ycdy4")
+
+[node name="Cube5" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 2.60642)
+mesh = SubResource("ArrayMesh_vivmo")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube5"]
+transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
+mesh = SubResource("TextMesh_yaehf")
+skeleton = NodePath("../../Cube5")
+script = ExtResource("12_ycdy4")
+
+[connection signal="input_event" from="Node3D/Watermelon_upgrade" to="Node3D/Watermelon_upgrade" method="_on_input_event"]
+[connection signal="input_event" from="Node3D/kiwi_upgrade" to="Node3D/kiwi_upgrade" method="_on_input_event"]
+[connection signal="input_event" from="Node3D/orange_upgrade" to="Node3D/orange_upgrade" method="_on_input_event"]
+[connection signal="input_event" from="Node3D/orange_upgrade4" to="Node3D/orange_upgrade4" method="_on_input_event"]
+[connection signal="input_event" from="Node3D/banana_upgrade" to="Node3D/banana_upgrade" method="_on_input_event"]

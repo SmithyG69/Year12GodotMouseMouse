@@ -1,0 +1,8 @@
+extends Area3D
+
+func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		if Global.orange_upgrade_cost <= Global.giblits:
+			Global.giblits =- Global.orange_upgrade_cost
+			Global.max_orange = Global.max_orange * 2
+			Global.orange_upgrade_cost = Global.orange_upgrade_cost * 22

@@ -1,0 +1,88 @@
+[gd_scene load_steps=14 format=3 uid="uid://0h7v70rgsq4a"]
+
+[ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="2_hjueh"]
+[ext_resource type="PackedScene" uid="uid://ij6wrfsn4bt3" path="res://button.tscn" id="3_v3g52"]
+[ext_resource type="Script" uid="uid://cq8qlnhjunxh6" path="res://watermelon_delivery.gd" id="4_f8gsh"]
+[ext_resource type="PackedScene" uid="uid://bfcvkx8u4ajgf" path="res://fruit/watermelon.tscn" id="6_01tv7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_khjm0"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_khjm0"]
+size = Vector3(0.504883, 1, 3.97461)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_v3g52"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v3g52"]
+size = Vector3(0.730957, 1, 3.49707)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_f8gsh"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f8gsh"]
+size = Vector3(3.86131, 1, 0.623169)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_aoldx"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aoldx"]
+size = Vector3(4.43997, 1, 0.627991)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bq4be"]
+size = Vector3(7.06982, 1.32532, 20.2708)
+
+[node name="Hub" type="Node3D"]
+
+[node name="left wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_khjm0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="left wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9368, 0, -0.0459248)
+shape = SubResource("BoxShape3D_khjm0")
+
+[node name="right wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_v3g52")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="right wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.02979, 0, 0.0395508)
+shape = SubResource("BoxShape3D_v3g52")
+
+[node name="top wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_f8gsh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="top wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.10656, 0, -1.9673)
+shape = SubResource("BoxShape3D_f8gsh")
+
+[node name="bottom wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_aoldx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bottom wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206894, 0, 1.98301)
+shape = SubResource("BoxShape3D_aoldx")
+
+[node name="hub" parent="." instance=ExtResource("2_hjueh")]
+
+[node name="watermelon" parent="." instance=ExtResource("6_01tv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0586023, 0, -0.0952282)
+
+[node name="button2" parent="." instance=ExtResource("3_v3g52")]
+transform = Transform3D(0.000364996, 0, -0.0697084, 0, 0.0697094, 0, 0.0697084, 0, 0.000364996, -0.0704961, 2.25906, 2.05071)
+
+[node name="Area3D" type="Area3D" parent="button2"]
+script = ExtResource("4_f8gsh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button2/Area3D"]
+transform = Transform3D(1, 0, 4.65661e-10, 0, 0.999972, 0, -4.65661e-10, 0, 1, -0.347424, 0.162643, -0.525528)
+shape = SubResource("BoxShape3D_bq4be")
+
+[connection signal="input_event" from="button2/Area3D" to="button2/Area3D" method="_on_input_event"]

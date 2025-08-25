@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://brxnhyygg1jmt"]
+
+[ext_resource type="Script" uid="uid://2kv70bf46qmp" path="res://scripts/banana.gd" id="1_rci7o"]
+[ext_resource type="PackedScene" uid="uid://nrakv7dxoadk" path="res://HubScenes/banana.glb" id="2_ik3j3"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_s1qo3"]
+friction = 0.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_divbi"]
+radius = 0.494384
+
+[node name="Node3D" type="RigidBody3D" groups=["banana", "bouncer"]]
+collision_mask = 2
+axis_lock_linear_y = true
+physics_material_override = SubResource("PhysicsMaterial_s1qo3")
+gravity_scale = 0.0
+script = ExtResource("1_rci7o")
+
+[node name="banana" parent="." instance=ExtResource("2_ik3j3")]
+transform = Transform3D(0.493128, 0, 0, 0, 0.48555, 0, 0, 0, 0.495902, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.134149, 0)
+shape = SubResource("SphereShape3D_divbi")
+
+[node name="spawn timer banana" type="Timer" parent="."]
+wait_time = 30.0
+autostart = true

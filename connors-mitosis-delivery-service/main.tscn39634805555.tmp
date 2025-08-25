@@ -1,0 +1,74 @@
+[gd_scene load_steps=13 format=3 uid="uid://d1eo05rwiless"]
+
+[ext_resource type="Script" uid="uid://cqeoa1hsy83mb" path="res://scripts/main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://0h7v70rgsq4a" path="res://HubScenes/Watermelon_hub.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cabndw1fa45wv" path="res://HubScenes/kiwihub.tscn" id="3_4c57u"]
+[ext_resource type="PackedScene" uid="uid://cqvad0twbcffh" path="res://HubScenes/locked_hub.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://qsh5ex8amf17" path="res://Assets/backroundshop[.glb" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://jfnqw4drhp7s" path="res://lockedhub_2.tscn" id="4_efxa6"]
+[ext_resource type="PackedScene" uid="uid://cm5h2fw0ummdo" path="res://Assets/backround.glb" id="6_272bh"]
+[ext_resource type="Script" uid="uid://bov6t1og3te1g" path="res://scripts/label_3d.gd" id="7_272bh"]
+[ext_resource type="FontFile" uid="uid://br8qwoxpa06vq" path="res://scripts/Gibletsfont-Regular.ttf" id="11_ycdy4"]
+[ext_resource type="Script" uid="uid://bk42lou1755pi" path="res://request_label.gd" id="13_ycdy4"]
+
+[sub_resource type="TextMesh" id="TextMesh_2cqfq"]
+text = "Glibits:"
+font = ExtResource("11_ycdy4")
+
+[sub_resource type="TextMesh" id="TextMesh_w48qg"]
+text = "Request: "
+font = ExtResource("11_ycdy4")
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_0xm2m")
+
+[node name="WorldRoot" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="WorldRoot"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 18.6229, 0)
+current = true
+fov = 25.0
+size = 18.1817
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 19.2068, 0)
+
+[node name="locked hub" parent="." instance=ExtResource("3_h2yge")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 2, -18, -5)
+kiwihub = ExtResource("3_4c57u")
+lockedhub2 = ExtResource("4_efxa6")
+
+[node name="shopbackround" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(-1.23806e-08, 0, -0.283236, 0, 0.283236, 0, 0.283236, 0, -1.23806e-08, -8.21078, -14.9321, -1.51842)
+
+[node name="backround" parent="." instance=ExtResource("6_272bh")]
+transform = Transform3D(2.13077, 0, 0, 0, 1.13515, 0, 0, 0, 1.55362, -0.882221, -19.9835, -2.78618)
+
+[node name="Hub" parent="." instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -18, -5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.02735, 0, 0, 0, 0.123117, 2.96554, 0, -4.383, 0.0833011, -11.4937, -14.1108, 0)
+mesh = SubResource("TextMesh_2cqfq")
+script = ExtResource("7_272bh")
+
+[node name="request label" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.22038, 0, 0, 0, -0.222854, 3.62282, 0, -3.08481, -0.261721, -11.0519, -13.1562, -5.92468)
+mesh = SubResource("TextMesh_w48qg")
+script = ExtResource("13_ycdy4")
+
+[node name="shop" type="Node3D" parent="."]
+
+[node name="Area3D" type="Area3D" parent="shop"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shop/Area3D"]
+
+[node name="Area3D2" type="Area3D" parent="shop"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shop/Area3D2"]
+
+[node name="Area3D3" type="Area3D" parent="shop"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="shop/Area3D3"]

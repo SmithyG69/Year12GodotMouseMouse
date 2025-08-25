@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=4 uid="uid://ij6wrfsn4bt3"]
+
+[ext_resource type="FontFile" uid="uid://br8qwoxpa06vq" path="res://scripts/Gibletsfont-Regular.ttf" id="1_r04n3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d18en"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.5
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_r04n3"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAAGAAIAAAAHAAYABQACAAYABwAFAAYAAwAAAAIABwAAAAMABQAEAAIAAwACAAQABwABAAUABwADAAEAAQAEAAUAAQADAAQA"),
+"lods": [1.06904, PackedByteArray("AAABAAIAAQAAAAMAAwAAAAIAAQADAAQAAwACAAQAAQAFAAIABQAEAAIAAQAEAAUA")],
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAD//wAAAAAAAAAA/////wAA//8AAP//AAD///////8AAP////8AAAAAAAD//wAAAAAAAAAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_0o7yj"]
+resource_name = "button_Cube_001"
+_surfaces = [{
+"aabb": AABB(-1, -1, -1, 2, 2, 2),
+"attribute_data": PackedByteArray("/1////9f/3//n////5//f/+f/z//3/8//1//P/8f/z//nwAA/18AAP+f/7//X/+//9//f/8f/38="),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAAKAAIAAAALAAoACwADAAoACwABAAMAAwAFAAwAAwAEAAUAAQAEAAMAAQAGAAQABgAIAAQABgAJAAgADQAGAAEADQAHAAYA"),
+"lods": [1.06904, PackedByteArray("AAABAAIAAQADAAIAAQAEAAMAAwAEAAUAAQAGAAQAAQAHAAYABgAIAAQABgAJAAgA")],
+"material": SubResource("StandardMaterial3D_d18en"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 14,
+"vertex_data": PackedByteArray("AAAAAP//c9H//wAAAADq2gAA/////0rA/////wAA+vT///////8E3QAA/////4f2//8AAP//gLYAAAAA//8/qAAA/////0rAAAAAAP//c9EAAP//AABv2QAAAAAAABr7AAD//wAA4ugAAAAAAACT4TDQs/njJzBLufjFyDg9eiBmKbIMgmibnmsRyzicQhmvufjFyDDQs/n6yua6+spQ1xh1zNKxJ5+L")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_r04n3")
+
+[sub_resource type="TextMesh" id="TextMesh_n4tde"]
+text = "Deliver"
+font = ExtResource("1_r04n3")
+
+[node name="button" type="Node3D"]
+
+[node name="Cube" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.30887, 0, 0, 0, 0.490949, 0, 0, 0, 10.0373, -0.676111, -0.978531, -0.43665)
+mesh = SubResource("ArrayMesh_0o7yj")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.367811, -28.1249, -1.63103, 0, -1.63117, 28.1273, -28.1722, -0.367194, -0.0212945, -0.473551, -0.0282717, -0.505061)
+mesh = SubResource("TextMesh_n4tde")

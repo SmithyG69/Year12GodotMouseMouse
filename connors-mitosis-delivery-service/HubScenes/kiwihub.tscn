@@ -1,0 +1,102 @@
+[gd_scene load_steps=12 format=3 uid="uid://cabndw1fa45wv"]
+
+[ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="1_mo3ya"]
+[ext_resource type="PackedScene" uid="uid://ij6wrfsn4bt3" path="res://button.tscn" id="3_im5gq"]
+[ext_resource type="Script" uid="uid://cig3ncnd8bbnb" path="res://kiwi_delivery.gd" id="4_c0w7m"]
+[ext_resource type="PackedScene" uid="uid://bxibpfkv4ddmm" path="res://fruit/kiwifruit.tscn" id="8_fhw0w"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_7dmwx"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bsmud"]
+size = Vector3(0.503906, 3.96216, 3.83649)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g7uya"]
+size = Vector3(0.506104, 3.96216, 3.85602)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0k5xr"]
+size = Vector3(3.96375, 3.96216, 0.34964)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_36jsg"]
+size = Vector3(4.24182, 3.96216, 0.514442)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xjl6o"]
+size = Vector3(3.39478, 0.477539, 3.24902)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c0w7m"]
+size = Vector3(7.06982, 1.32532, 20.2708)
+
+[node name="kiwihub" type="Node3D"]
+
+[node name="hub" parent="." instance=ExtResource("1_mo3ya")]
+
+[node name="left wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_7dmwx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="left wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.90409, 0.168823, -0.019283)
+shape = SubResource("BoxShape3D_bsmud")
+debug_color = Color(0.937255, 0, 0.627451, 1)
+
+[node name="right wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_7dmwx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="right wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90931, 0, 0.150726)
+shape = SubResource("BoxShape3D_g7uya")
+debug_color = Color(0.945098, 0, 0.588235, 1)
+
+[node name="top wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_7dmwx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="top wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.106873, 0, -1.80572)
+shape = SubResource("BoxShape3D_0k5xr")
+debug_color = Color(0.945098, 0, 0.588235, 1)
+
+[node name="bottom wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_7dmwx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="bottom wall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0656128, 0, 1.91914)
+shape = SubResource("BoxShape3D_36jsg")
+debug_color = Color(0.945098, 0, 0.588235, 1)
+
+[node name="roof" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 3
+physics_material_override = SubResource("PhysicsMaterial_7dmwx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="roof"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0775146, 1.98917, 0.00244141)
+shape = SubResource("BoxShape3D_xjl6o")
+debug_color = Color(0.945098, 0, 0.588235, 1)
+
+[node name="floor" type="StaticBody3D" parent="." groups=["hitboxes"]]
+collision_layer = 3
+physics_material_override = SubResource("PhysicsMaterial_7dmwx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.927025, 0)
+shape = SubResource("BoxShape3D_xjl6o")
+debug_color = Color(0.945098, 0, 0.588235, 1)
+
+[node name="kiwifruit" parent="." instance=ExtResource("8_fhw0w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00751412, 0.30301, 0.0377629)
+
+[node name="button2" parent="." instance=ExtResource("3_im5gq")]
+transform = Transform3D(0.0696993, 0, 0.00118132, 0, 0.0697094, 0, -0.00118132, 0, 0.0696993, 1.97998, 2.27046, 0.207483)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.0696993, 0, 0.00118132, 0, 0.0697094, 0, -0.00118132, 0, 0.0696993, 1.97998, 2.27046, 0.207483)
+script = ExtResource("4_c0w7m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 4.65661e-10, 0, 0.999972, 0, -4.65661e-10, 0, 1, -0.347424, 0.162643, -0.525528)
+shape = SubResource("BoxShape3D_c0w7m")
+
+[connection signal="input_event" from="Area3D" to="Area3D" method="_on_input_event"]
