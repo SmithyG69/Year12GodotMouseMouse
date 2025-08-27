@@ -6,8 +6,9 @@ extends Node3D
 @export var y_center: float = 0.0
 @export var random_y_range: float = 4.0 # spawn between y_center±this
 
+
 func _ready():
-	assert(fruit_scene, "Assign Fruit.tscn to fruit_scene in the Inspector.")
+	assert(fruit_scene, "res://fruit/watermelon.tscn")
 	randomize()
 	for i in range(count):
 		_spawn_one()
