@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://0h7v70rgsq4a"]
+[gd_scene load_steps=15 format=3 uid="uid://0h7v70rgsq4a"]
 
+[ext_resource type="Script" uid="uid://b1k8cr77op4uu" path="res://HubScenes/watermelon_hub.gd" id="1_aoldx"]
 [ext_resource type="PackedScene" uid="uid://chhjjylfydc7d" path="res://Assets/hub.glb" id="2_hjueh"]
 [ext_resource type="PackedScene" uid="uid://ij6wrfsn4bt3" path="res://button.tscn" id="3_v3g52"]
 [ext_resource type="Script" uid="uid://cq8qlnhjunxh6" path="res://watermelon_delivery.gd" id="4_f8gsh"]
@@ -37,6 +38,7 @@ size = Vector3(4.43997, 1, 0.627991)
 size = Vector3(7.06982, 1.32532, 20.2708)
 
 [node name="Hub" type="Node3D"]
+script = ExtResource("1_aoldx")
 
 [node name="left wall" type="StaticBody3D" parent="." groups=["hitboxes"]]
 collision_layer = 2
