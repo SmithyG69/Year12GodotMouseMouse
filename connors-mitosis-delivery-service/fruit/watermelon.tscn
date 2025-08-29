@@ -733,7 +733,7 @@ script = ExtResource("1_uqt3a")
 shape = SubResource("SphereShape3D_6apsg")
 
 [node name="spawn timer" type="Timer" parent="."]
-wait_time = 0.001
+wait_time = 3.0
 autostart = true
 
 [node name="melon for sir (1)" type="Node3D" parent="."]

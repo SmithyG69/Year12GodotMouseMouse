@@ -24,5 +24,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.134149, 0)
 shape = SubResource("SphereShape3D_divbi")
 
 [node name="spawn timer banana" type="Timer" parent="."]
-wait_time = 30.0
+wait_time = 20.0
 autostart = true

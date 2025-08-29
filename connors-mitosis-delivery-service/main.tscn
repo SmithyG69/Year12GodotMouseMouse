@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://d1eo05rwiless"]
+[gd_scene load_steps=30 format=4 uid="uid://d1eo05rwiless"]
 
 [ext_resource type="Script" uid="uid://cqeoa1hsy83mb" path="res://scripts/main.gd" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://0h7v70rgsq4a" path="res://HubScenes/Watermelon_hub.tscn" id="2_h2yge"]
@@ -9,11 +9,12 @@
 [ext_resource type="Script" uid="uid://bov6t1og3te1g" path="res://scripts/label_3d.gd" id="7_272bh"]
 [ext_resource type="Texture2D" uid="uid://dxtokiwgwampe" path="res://Screenshot 2025-08-12 at 10.29.52 AM.png" id="10_4c57u"]
 [ext_resource type="Script" uid="uid://quvtuaoe2aem" path="res://watermelon_upgrade.gd" id="11_dg77c"]
-[ext_resource type="Script" uid="uid://cxei7exkoh36q" path="res://mesh_instance_3d.gd" id="12_ycdy4"]
+[ext_resource type="Script" uid="uid://cxei7exkoh36q" path="res://watermelon_upgradelabel.gd" id="12_ycdy4"]
+[ext_resource type="Script" uid="uid://cba3dxckji23c" path="res://kiwi_label.gd" id="13_vivmo"]
 [ext_resource type="Script" uid="uid://cku5rl34r534g" path="res://kiwi_upgrade.gd" id="13_w48qg"]
 [ext_resource type="Script" uid="uid://bk42lou1755pi" path="res://request_label.gd" id="13_ycdy4"]
-[ext_resource type="Script" uid="uid://bxi6jh43ua6i4" path="res://orange_upgrade.gd" id="14_vivmo"]
-[ext_resource type="Script" uid="uid://knlgrdp46dr1" path="res://orange_upgrade1.gd" id="15_2cqfq"]
+[ext_resource type="Script" uid="uid://bxi6jh43ua6i4" path="res://banana_upgrade.gd" id="14_vivmo"]
+[ext_resource type="Script" uid="uid://d0so50ei6yav1" path="res://banana_upgrade_label.gd" id="15_yaehf"]
 
 [sub_resource type="Image" id="Image_w48qg"]
 data = {
@@ -205,7 +206,15 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_irjrc")
 
+[sub_resource type="TextMesh" id="TextMesh_vivmo"]
+text = "Upgrade"
+font = SubResource("FontFile_2cqfq")
+
 [sub_resource type="TextMesh" id="TextMesh_yaehf"]
+text = "Upgrade"
+font = SubResource("FontFile_2cqfq")
+
+[sub_resource type="TextMesh" id="TextMesh_074og"]
 text = "Upgrade"
 font = SubResource("FontFile_2cqfq")
 
@@ -253,6 +262,7 @@ transform = Transform3D(15, 0, 0, 0, 0.939, 0, 0, 0, 15, 0, -21.2022, 0)
 mesh = SubResource("PlaneMesh_dg77c")
 
 [node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.33353, 0, 0)
 
 [node name="Watermelon_upgrade" type="Area3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.165938)
@@ -262,14 +272,15 @@ script = ExtResource("11_dg77c")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
 shape = SubResource("BoxShape3D_w48qg")
 
-[node name="Cube" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 1.10302)
+[node name="Cube" type="MeshInstance3D" parent="Node3D/Watermelon_upgrade"]
+transform = Transform3D(1.54946, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 1.26896)
 mesh = SubResource("ArrayMesh_vivmo")
 skeleton = NodePath("")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube"]
-transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
-mesh = SubResource("TextMesh_yaehf")
+[node name="watermelon_upgrade label" type="MeshInstance3D" parent="Node3D/Watermelon_upgrade"]
+transform = Transform3D(1.55655, 0, 0, 0, -0.000887423, 1.27617, 0, -2.63745, -0.0144931, -11.5413, -14.3864, 1.24012)
+mesh = SubResource("TextMesh_vivmo")
+skeleton = NodePath("../Cube")
 script = ExtResource("12_ycdy4")
 
 [node name="kiwi_upgrade" type="Area3D" parent="Node3D"]
@@ -280,74 +291,36 @@ script = ExtResource("13_w48qg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
 shape = SubResource("BoxShape3D_w48qg")
 
-[node name="orange_upgrade" type="Area3D" parent="Node3D"]
+[node name="Cube5" type="MeshInstance3D" parent="Node3D/kiwi_upgrade"]
+transform = Transform3D(1.48727, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 1.26896)
+mesh = SubResource("ArrayMesh_vivmo")
+skeleton = NodePath("")
+
+[node name="kiwi upgrade label" type="MeshInstance3D" parent="Node3D/kiwi_upgrade"]
+transform = Transform3D(1.55655, 0, 0, 0, -0.000887423, 1.27617, 0, -2.63745, -0.0144931, -11.5712, -14.3864, 1.2397)
+mesh = SubResource("TextMesh_yaehf")
+skeleton = NodePath("../Cube5")
+script = ExtResource("13_vivmo")
+
+[node name="banana_upgrade2" type="Area3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.67405)
 script = ExtResource("14_vivmo")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/orange_upgrade"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/banana_upgrade2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
 shape = SubResource("BoxShape3D_w48qg")
 
-[node name="Cube2" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 3.94301)
+[node name="Cube2" type="MeshInstance3D" parent="Node3D/banana_upgrade2"]
+transform = Transform3D(1.48191, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 1.26896)
 mesh = SubResource("ArrayMesh_vivmo")
 skeleton = NodePath("")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube2"]
-transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
-mesh = SubResource("TextMesh_yaehf")
-script = ExtResource("12_ycdy4")
-
-[node name="orange_upgrade4" type="Area3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.01734)
-script = ExtResource("15_2cqfq")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/orange_upgrade4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
-shape = SubResource("BoxShape3D_w48qg")
-
-[node name="Cube3" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 5.2863)
-mesh = SubResource("ArrayMesh_vivmo")
-skeleton = NodePath("")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube3"]
-transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
-mesh = SubResource("TextMesh_yaehf")
-script = ExtResource("12_ycdy4")
-
-[node name="banana_upgrade" type="Area3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5.41344)
-script = ExtResource("11_dg77c")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/banana_upgrade"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.3039, -13.968, 1.27551)
-shape = SubResource("BoxShape3D_w48qg")
-
-[node name="Cube4" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 6.82765)
-mesh = SubResource("ArrayMesh_vivmo")
-skeleton = NodePath("")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube4"]
-transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
-mesh = SubResource("TextMesh_yaehf")
-skeleton = NodePath("../../Cube4")
-script = ExtResource("12_ycdy4")
-
-[node name="Cube5" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1.03615, 0, 0, 0, 0.0870424, 0, 0, 0, 0.505714, -11.321, -14.5202, 2.60642)
-mesh = SubResource("ArrayMesh_vivmo")
-skeleton = NodePath("")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/Cube5"]
-transform = Transform3D(1.50224, 0, 0, 0, -0.0101953, 14.6615, 0, -5.2153, -0.0286587, -0.32596, 1.53748, -0.0570319)
-mesh = SubResource("TextMesh_yaehf")
-skeleton = NodePath("../../Cube5")
-script = ExtResource("12_ycdy4")
+[node name="banana_upgrade_label" type="MeshInstance3D" parent="Node3D/banana_upgrade2"]
+transform = Transform3D(1.55655, 0, 0, 0, -0.000887423, 1.27617, 0, -2.63745, -0.0144931, -11.5305, -14.3864, 1.24012)
+mesh = SubResource("TextMesh_074og")
+skeleton = NodePath("../Cube2")
+script = ExtResource("15_yaehf")
 
 [connection signal="input_event" from="Node3D/Watermelon_upgrade" to="Node3D/Watermelon_upgrade" method="_on_input_event"]
 [connection signal="input_event" from="Node3D/kiwi_upgrade" to="Node3D/kiwi_upgrade" method="_on_input_event"]
-[connection signal="input_event" from="Node3D/orange_upgrade" to="Node3D/orange_upgrade" method="_on_input_event"]
-[connection signal="input_event" from="Node3D/orange_upgrade4" to="Node3D/orange_upgrade4" method="_on_input_event"]
-[connection signal="input_event" from="Node3D/banana_upgrade" to="Node3D/banana_upgrade" method="_on_input_event"]
+[connection signal="input_event" from="Node3D/banana_upgrade2" to="Node3D/banana_upgrade2" method="_on_input_event"]

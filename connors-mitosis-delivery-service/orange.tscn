@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://b20c407obmm72"]
+
+[ext_resource type="Script" uid="uid://bsmfc60uq0wdp" path="res://orange.gd" id="1_aoevm"]
+[ext_resource type="PackedScene" uid="uid://duf6wta7vtmwb" path="res://Orange.glb" id="2_wskhw"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6mxjk"]
+radius = 1.14595
+
+[node name="orange" type="RigidBody3D"]
+script = ExtResource("1_aoevm")
+
+[node name="Orange" parent="." instance=ExtResource("2_wskhw")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_6mxjk")

@@ -6,9 +6,9 @@ func _on_input_event(camera: Node, event: InputEvent, event_position: Vector3, n
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		var current_banana = get_tree().get_nodes_in_group("banana").size()
 		if current_banana >= 2:
-			Global.giblits += reward_giblits * current_banana
+			Global.giblits += reward_giblits * current_banana - 1
 			#Global.request = Global.get_random_unlocked()
 			var banana = get_tree().get_nodes_in_group("banana")
 			var to_remove = min(current_banana, banana.size())
-			for i in range(to_remove):
+			for i in range(to_remove-1):
 				banana[i].queue_free()

@@ -7,7 +7,7 @@ var orange_upgrade_cost = 12000
 
 var giblits: int = 0
 var unlocked_fruit = ["watermelon"]
-var max_watermelon = 999999999999
+var max_watermelon = 8
 var max_kiwi = 8
 var max_banana = 8
 var request = null
